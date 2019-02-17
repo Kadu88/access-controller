@@ -23,11 +23,19 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/jvectormap/jquery-jvectormap.css",
+              "node_modules/admin-lte/dist/css/AdminLTE.min.css",
+              "node_modules/admin-lte/dist/css/skins/_all-skins.min.css",
               "src/styles.css"
-            ],
-            "scripts": [],
-            "es5BrowserSupport": true
-          },
+              ],
+              "scripts": ["node_modules/jquery/dist/jquery.min.js",
+                "node_modules/admin-lte/dist/js/adminlte.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "node_modules/fastclick/lib/fastclick.js",
+                "node_modules/jquery-slimscroll/jquery.slimscroll.js"]
+            },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -44,14 +52,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "buildOptimizer": true
             }
           }
         },
@@ -106,7 +107,6 @@
     "protocol-monitor-e2e": {
       "root": "e2e/",
       "projectType": "application",
-      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
